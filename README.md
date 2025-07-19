@@ -1,5 +1,5 @@
-🎧 DSP Noise Reduction System
 
+# DSP Noise Reduction System
 This project implements a **Digital Signal Processing (DSP)** noise reduction system using **C++**. It reads a noisy input signal from a file, applies a **median filter** to reduce impulse noise, and writes the cleaned signal to an output file.
 
 ---
@@ -24,60 +24,70 @@ This project implements a **Digital Signal Processing (DSP)** noise reduction sy
 
 ## 📂 File Structure
 
+```
 DSP-Noise-Reduction/
 ├── inputsignal.txt # Input signal values (one per line)
 ├── outputsignal.txt # Filtered output signal
 ├── main.cpp # Complete C++ source code
 ├── README.md # Project documentation
 └── .gitignore # Git ignore config
+```
+
+---
 
 ## 💻 How to Run
 
 ### 1. Clone the Repository
-
 ```bash
-git clone https://github.com/your-username/DSP-Noise-Reduction-System.git
-cd DSP-Noise-Reduction-System
+git clone https://github.com/your-username/DSP-Noise-Reduction.git
+cd DSP-Noise-Reduction
+```
 
-
-2. Add Input Signal
+### 2. Add Input Signal
 Create a file named inputsignal.txt in the root folder and add signal values, each on a new line.
-
 Example:
-
+```
 10  
 11  
 250  ← noise spike  
 12  
 13
+```
 
-
-3. Compile the Program
+### 3. Compile the Program
 Use any C++ compiler:
+```
 g++ main.cpp -o dsp_filter
+```
 
-
-4. Run the Executable
+### 4. Run the Executable
+```
 ./dsp_filter
+```
 
-
-5. View the Output
+### 5. View the Output
 Check outputsignal.txt to see the filtered signal:
-
+```
 10  
 11  
 12  ← cleaned  
 12  
 13
+```
+___
 
 
-⚙️ Configuration
+## ⚙️ Configuration
 You can customize the window size of the median filter directly in the code:
+```
 MedianFilter<double> filter(5); // window size = 5
+```
 The window size should be an odd number for a proper median to exist.
 
+___
 
-🛠️ Tech Stack
+
+## 🛠️ Tech Stack
 Language: C++
 
 Compiler: GCC / Clang / MSVC
@@ -86,21 +96,47 @@ Libraries: STL (Standard Template Library)
 
 Development Environment: VS Code / any IDE
 
-🧪 Example Input & Output
+___
 
 
+## 🧪 Example Input & Output
 inputsignal.txt
+```
 100  
 102  
 300  
 104  
 105
-
-
+```
 outputsignal.txt
+```
 100  
 102  
 104  
 104  
 105
+```
 The spike value 300 has been successfully filtered out.
+
+___
+
+
+## ✨ Possible Extensions
+Add support for real-time audio stream filtering
+
+Implement other filters (mean, Gaussian)
+
+Build a GUI using Qt or PyQt
+
+Visualize before/after signals using Python + matplotlib
+
+Turn into a web tool using Flask or Node.js
+
+___
+
+
+## 📄 License
+This project is licensed under the MIT License – feel free to use and modify!
+
+
+
